@@ -1,0 +1,125 @@
+{    "ExternalFaults": {
+        "selected": 1,
+        "compare_all": 1,
+        "all_severities": 1,
+        "mixed": 0,
+        "keep_originals": 0,
+        "image_dir": "Test_Images",
+        "Faults": {
+            "gaussian_noise": {
+                "category": "noise",
+                "active": 1,
+                "probability": 1,
+                "severity": 5
+            },
+            "shot_noise": {
+                "category": "noise",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "impulse_noise": {
+                "category": "noise",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "defocus_blur": {
+                "category": "blur",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "motion_blur": {
+                "category": "blur",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "zoom_blur": {
+                "category": "blur",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "snow": {
+                "category": "environment",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "frost": {
+                "category": "environment",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "fog": {
+                "category": "environment",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "rain": {
+                "category": "environment",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "dirt": {
+                "category": "environment",
+                "active": 0,
+                "probability": 1,
+                "severity": 2
+            },
+            "brightness": {
+                "category": "environment",
+                "active": 1,
+                "probability": 1,
+                "severity": 3
+            },
+            "contrast": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "elastic_transform": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "pixelate": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "jpeg_compression": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "chromatic_aberration": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "fisheye": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 3
+            },
+            "coarse_dropout": {
+                "category": "digital",
+                "active": 0,
+                "probability": 1,
+                "severity": 5
+            }
+        }
+    }
+}
