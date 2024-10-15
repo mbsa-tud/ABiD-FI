@@ -1,7 +1,7 @@
 import json
 
 from ImageFaults import inject_external_faults
-
+from LidarFaults import inject_lidar_faults
 
 if __name__ == "__main__":
     # Get data
@@ -17,3 +17,6 @@ if __name__ == "__main__":
 
     if config["ExternalFaults"]["selected"]:
         inject_external_faults(config, 1)
+
+    if config["LiDARFaults"]["selected"]:
+        inject_lidar_faults(config, 1)

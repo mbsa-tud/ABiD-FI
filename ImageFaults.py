@@ -43,7 +43,7 @@ def define_images(config, verbose, fault_data, corruption, severity = ""):
     if config["ExternalFaults"]["mixed"]:
         folder_corrupted_images = f"Results/CorruptedImages/Mixed"
     else:
-        folder_corrupted_images = f"Results/CorruptedImages/{corruption}_severity_{severity}"
+        folder_corrupted_images = f"{config['ExternalFaults']['result_dir']}/{corruption}_severity_{severity}"
 
     if not os.path.exists(folder_corrupted_images):
         os.makedirs(f"{folder_corrupted_images}/images")

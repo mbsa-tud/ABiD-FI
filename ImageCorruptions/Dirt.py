@@ -42,10 +42,10 @@ def get_mask(image, severity):
 
     return cropped_mask
 
-if __name__ == "__main__":
-    photo_path = r"C:\Users\ac140891\PycharmProjects\FaultInjectionABiD\Test_Images/1726834778787366323.png"
+r"""if __name__ == "__main__":
+    photo_path = C:\Users\ac140891\PycharmProjects\FaultInjectionABiD\Test_Images/1726834778787366323.png
     image = cv2.imread(photo_path)
     for i in range (1, 6, 1):
         result = add_dirt(image, i)
         cv2.imshow("result", result)
-        cv2.waitKey(0)
+        cv2.waitKey(0)"""

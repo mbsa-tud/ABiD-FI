@@ -1,10 +1,11 @@
 {    "ExternalFaults": {
-        "selected": 1,
+        "selected": 0,
         "compare_all": 1,
         "all_severities": 1,
         "mixed": 0,
         "keep_originals": 0,
         "image_dir": "Test_Images",
+        "result_dir": "Results/CorruptedImages",
         "Faults": {
             "gaussian_noise": {
                 "category": "noise",
@@ -119,6 +120,30 @@
                 "active": 0,
                 "probability": 1,
                 "severity": 5
+            }
+        }
+    },
+     "LiDARFaults": {
+         "selected": 1,
+         "compare_all": 0,
+         "all_severities": 0,
+        "pointcloud_dir": "Test_Pointclouds",
+         "result_dir": "Results/CorruptedPointClouds",
+        "Faults": {
+            "noise": {
+                "active": 1,
+                "probability": 1,
+                "severity": 1
+            },
+            "outliers": {
+                "active": 0,
+                "probability": 0.1,
+                "severity": 20
+            },
+            "missing_points": {
+                "active": 0,
+                "probability": 0.1,
+                "severity": 30
             }
         }
     }
