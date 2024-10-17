@@ -2,8 +2,8 @@ import open3d as o3d
 import numpy as np
 def compare_pointclouds():
     # Visualize the original and noisy point clouds side by side
-    opcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/noise/sphere.pcd")
-    cpcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/noise/sphere_corrupted.pcd")
+    opcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/outliers/sphere.pcd")
+    cpcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/outliers/sphere_corrupted.pcd")
 
     print("Original Point Cloud:")
     o3d.visualization.draw_geometries([opcd], window_name="Original Point Cloud", width=800, height=600)
@@ -36,6 +36,36 @@ def create_sphere_point_cloud(radius=1.0, num_points=1000):
 
         return sphere_pcd
 
+def save_image_of_pointcloud(pcd, filename="Results/point_cloud_image.png"):
+        vis = o3d.visualization.Visualizer()
+        vis.create_window(visible=False)  # Create a window without displaying it
+
+        # Add the point cloud to the visualizer
+        vis.add_geometry(pcd)
+
+        # Set a view control to zoom in/out, rotate, etc. (optional, for a better angle)
+        view_control = vis.get_view_control()
+        view_control.set_front([0.0, 0.0, -1.0])  # Adjust camera view (optional)
+        view_control.set_lookat([0.0, 0.0, 0.0])
+        view_control.set_up([0.0, -1.0, 0.0])
+        view_control.set_zoom(0.54)  # Zoom in/out
+
+        # Capture the screen as an image
+        vis.poll_events()  # Process visualization events
+        vis.update_renderer()  # Update the renderer to display the current view
+
+        # Save the screenshot to a file
+        vis.capture_screen_image(filename)
+
+        # Close the visualizer
+        vis.destroy_window()
+
+        print(f"Point cloud image saved as {filename}")
+
+
 
 if __name__ =="__main__":
-    compare_pointclouds()
+    #compare_pointclouds()
+
+    pcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/outliers_5/sphere_outliers_severity_5.pcd")
+    save_image_of_pointcloud(pcd, "Results/Images/Outliers5.png")

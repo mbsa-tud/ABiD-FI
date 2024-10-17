@@ -22,7 +22,7 @@ This folder contains the codes for the image corruptions, that are not included 
 
 - **LiDARCorruptions**
 This folder contains the codes for the LiDAR corruptions. If you want to add a specific type of corruption, please add the file to this folder.
-
+Input for these functions are always the Pointcloud Data and the severity
 
 - **FaultInjection**
 This is the main file for the fault injection and manages the faults to be injected.

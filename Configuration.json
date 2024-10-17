@@ -126,7 +126,7 @@
      "LiDARFaults": {
          "selected": 1,
          "compare_all": 0,
-         "all_severities": 0,
+         "all_severities": 1,
         "pointcloud_dir": "Test_Pointclouds",
          "result_dir": "Results/CorruptedPointClouds",
         "Faults": {
@@ -136,9 +136,9 @@
                 "severity": 1
             },
             "outliers": {
-                "active": 0,
-                "probability": 0.1,
-                "severity": 20
+                "active": 1,
+                "probability": 1,
+                "severity": 5
             },
             "missing_points": {
                 "active": 0,
