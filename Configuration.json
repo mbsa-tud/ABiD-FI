@@ -141,6 +141,16 @@
                 "severity": 5
             },
             "missing_points": {
+                "active": 0,
+                "probability": 1,
+                "severity": 1
+            },
+            "horizontal_occlusion": {
+                "active": 1,
+                "probability": 1,
+                "severity": 1
+            },
+            "vertical_occlusion": {
                 "active": 1,
                 "probability": 1,
                 "severity": 1

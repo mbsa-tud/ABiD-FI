@@ -2,8 +2,8 @@ import open3d as o3d
 import numpy as np
 def compare_pointclouds():
     # Visualize the original and noisy point clouds side by side
-    opcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/missing_points_1/sphere_missing_points_severity_1.pcd")
-    cpcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/missing_points_5/sphere_missing_points_severity_5.pcd")
+    opcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/vertical_occlusion_1/sphere_vertical_occlusion_severity_1.pcd")
+    cpcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/horizontal_occlusion_4/sphere_horizontal_occlusion_severity_4.pcd")
 
     print("Original Point Cloud:")
     o3d.visualization.draw_geometries([opcd], window_name="Original Point Cloud", width=800, height=600)
@@ -45,7 +45,7 @@ def save_image_of_pointcloud(pcd, filename="Results/point_cloud_image.png"):
 
         # Set a view control to zoom in/out, rotate, etc. (optional, for a better angle)
         view_control = vis.get_view_control()
-        view_control.set_front([0.0, 0.0, -1.0])  # Adjust camera view (optional)
+        view_control.set_front([-0.2, 0.0, -1.0])  # Adjust camera view (optional)
         view_control.set_lookat([0.0, 0.0, 0.0])
         view_control.set_up([0.0, -1.0, 0.0])
         view_control.set_zoom(0.8)  # Zoom in/out
@@ -65,7 +65,7 @@ def save_image_of_pointcloud(pcd, filename="Results/point_cloud_image.png"):
 
 
 if __name__ =="__main__":
-    #compare_pointclouds()
+    compare_pointclouds()
 
-    pcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/missing_points_5/sphere_missing_points_severity_5.pcd")
-    save_image_of_pointcloud(pcd, "Results/Images/Missing5.png")
+    #pcd = o3d.io.read_point_cloud("Results/CorruptedPointClouds/occlusion_4/sphere_occlusion_severity_4.pcd")
+    #save_image_of_pointcloud(pcd, "Results/Images/Occlusion4.png")

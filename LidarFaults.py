@@ -8,7 +8,7 @@ from tqdm import tqdm
 from LiDARCorruptions.Noise import add_noise
 from LiDARCorruptions.Outliers import add_outliers
 from LiDARCorruptions.MissingPoints import remove_points
-
+from LiDARCorruptions.Occlusion import horizontal_occlusion, vertical_occlusion
 def get_lidar_corruptions(config):
     """This function gets the names of each fault that was selected and returns them in a list."""
     if config["LiDARFaults"]["compare_all"]:
@@ -74,6 +74,13 @@ def inject_lidar_faults(config, verbose):
 
                 elif corruption == "missing_points":
                     corrupted_pcd = remove_points(pcd, severity)
+
+                elif corruption == "horizontal_occlusion":
+                    corrupted_pcd = horizontal_occlusion(pcd, severity)
+
+                elif corruption == "vertical_occlusion":
+                    corrupted_pcd = vertical_occlusion(pcd, severity)
+
                 else:
                     print(f"Unknown corruption type: {corruption}")
                     continue
