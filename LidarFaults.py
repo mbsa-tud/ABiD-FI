@@ -7,6 +7,7 @@ from tqdm import tqdm
 
 from LiDARCorruptions.Noise import add_noise
 from LiDARCorruptions.Outliers import add_outliers
+from LiDARCorruptions.MissingPoints import remove_points
 
 def get_lidar_corruptions(config):
     """This function gets the names of each fault that was selected and returns them in a list."""
@@ -72,8 +73,7 @@ def inject_lidar_faults(config, verbose):
                     corrupted_pcd = add_outliers(pcd, severity)  # Apply outliers with the current severity level
 
                 elif corruption == "missing_points":
-                    pass  # You can add more logic for other corruption types here
-
+                    corrupted_pcd = remove_points(pcd, severity)
                 else:
                     print(f"Unknown corruption type: {corruption}")
                     continue

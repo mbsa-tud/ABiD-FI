@@ -131,19 +131,19 @@
          "result_dir": "Results/CorruptedPointClouds",
         "Faults": {
             "noise": {
-                "active": 1,
+                "active": 0,
                 "probability": 1,
                 "severity": 1
             },
             "outliers": {
-                "active": 1,
+                "active": 0,
                 "probability": 1,
                 "severity": 5
             },
             "missing_points": {
-                "active": 0,
-                "probability": 0.1,
-                "severity": 30
+                "active": 1,
+                "probability": 1,
+                "severity": 1
             }
         }
     }
